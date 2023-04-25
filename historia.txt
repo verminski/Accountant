@@ -1,0 +1,2 @@
+[saldo -> dodaj] Dodano 500.0 PLN
+[zakup] Kupiono 2 sztuk rower za 500.0 PLN
