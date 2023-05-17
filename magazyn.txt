@@ -1,1 +1,0 @@
-{'pieczywo': {'cena': 2.5, 'ilosc': 10}, 'nabia³': {'cena': 3.5, 'ilosc': 5}, 'owoc': {'cena': 4.5, 'ilosc': 3}, 'warzywo': {'cena': 5.5, 'ilosc': 1}, 'rower': {'cena': 500.0, 'ilosc': 2}}
