@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <h1>Witaj w aplikacji</h1>
+</div>
+<div class="container">
+    <div class="columns">
+        <div class="column col-6">
+            <div class="float-left d-flex">
+                <div class="p-centered">
+                    <h4>Magazyn</h4>
+                </div>
+                <div class="p-centered ml-2">
+                    <a href="/zakup" class="btn btn-primary btn-sm>">Zakup</a>
+                </div>
+                <div class="p-centered ml-2">
+                    <a href="/sprzedaz" class="btn btn-primary btn-sm>">Sprzedaż</a>
+                </div>
+            </div>
+        </div>
+        <div class ="column col-6">
+            <div class="float-right d-flex">
+                <div class="p-centered">
+                    <h4>Saldo {{ saldo }} PLN</h4>
+                </div>
+                <div class="p-centered ml-2">
+                    <a href="/saldo" class="btn btn-primary btn-sm>">Zmień</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <table class="table">
+  <thead>
+    <tr>
+      <th>Nazwa</th>
+      <th>Ilość</th>
+      <th>Cena</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for produkt in magazyn %}
+  <tr>
+      <td>{{ produkt.name }}</td>
+      <td>{{ produkt.quantity }}</td>
+      <td>{{ produkt.price }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% endblock %}

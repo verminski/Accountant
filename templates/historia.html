@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <h1>Historia</h1>
+    <h3>{{ error }}</h3>
+</div>
+<div>
+    <table class="table">
+        <tbody>
+        {% for element in historia %}
+        <tr>
+            <td> {{element.timestamp}} - {{ element.operation }} - {{ element.message }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

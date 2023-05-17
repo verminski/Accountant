@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+  <div>
+    <h1>Saldo</h1>
+  </div>
+  <div>
+    <h5>Obecny stan konta: {{ saldo }} PLN</h5>
+  </div>
+  <div>
+    <form method="POST" action="/saldo">
+      <label for="kwota">Podaj kwotę:</label>
+      <input type="number" id="kwota" name="kwota" required>
+      <div>
+        <input type="radio" id="dodaj" name="opcja_saldo" value="dodaj" checked>
+        <label for="dodaj">Dodaj</label>
+        <input type="radio" id="odejmi" name="opcja_saldo" value="odejmij" checked>
+        <label for="odejmij">Odejmij</label>
+      </div>
+
+      <button type="submit" class="btn btn-success">Zapisz</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
